@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Treatment History</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+        }
+        .treatment-history {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            overflow: hidden;
+        }
+        .treatment-history h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 28px;
+            animation: fadeInUp 1s ease-out;
+        }
+        .treatment-history ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .treatment-history li {
+            border-bottom: 1px solid #eee;
+            padding: 20px;
+            transition: background-color 0.3s ease;
+            animation: slideInLeft 0.5s ease-out;
+        }
+        .treatment-history li:last-child {
+            border-bottom: none;
+        }
+        .treatment-history li:hover {
+            background-color: #bccc;
+            border-radius: 5px;
+            transform: scale(1.02);
+        }
+        .treatment-history li strong {
+            font-weight: bold;
+            margin-right: 5px;
+            color: #555;
+        }
+        .treatment-history li span {
+            display: block;
+            margin-top: 5px;
+            color: #777;
+        }
+        .treatment-history li p {
+            color: #666;
+            margin-top: 5px;
+        }
+        .treatment-history li strong, .treatment-history li span {
+            font-size: 16px;
+        }
+        .treatment-history li p {
+            font-size: 14px;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark ">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 position-fixed">
+                    <a href="#" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline">Menu</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link align-middle px-0">
+                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pres.html" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Prescription</span></a>
+                        </li>
+                        <li>
+                            <a href="medi.html" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Medication and Diseases</span></a>
+                        </li>
+                        <li>
+                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Diagnostic Investigations</span> </a>
+                                <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                                    <li class="w-100">
+                                        <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline px-3">Scan Reports</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline px-3">Test Results</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline px-3">Lifestyle Factors</span></a>
+                                    </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <hr>
+                    <div class="dropdown pb-4">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/mdo.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                            <span class="d-none d-sm-inline mx-1">loser</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="treatment-history ">
+                <h1>Your Treatment History</h1>
+                <ul>
+                    <li>
+                        <strong>Date:</strong> January 15, 2023<br>
+                        <strong>Provider:</strong> Dr. Smith<br>
+                        <strong>Treatment:</strong> Physical Therapy for lower back pain<br>
+                        <strong>Notes:</strong> Recommended daily stretching exercises
+                    </li>
+                    <li>
+                        <strong>Date:</strong> March 2, 2023<br>
+                        <strong>Provider:</strong> Dr. Johnson<br>
+                        <strong>Treatment:</strong> Prescription medication for migraines<br>
+                        <strong>Notes:</strong> Follow-up appointment scheduled for next month
+                    </li>
+                    <li>
+                        <strong>Date:</strong> September 10, 2023<br>
+                        <strong>Provider:</strong> Dr. Garcia<br>
+                        <strong>Treatment:</strong> Allergy testing and immunotherapy<br>
+                        <strong>Notes:</strong> Avoid exposure to allergens; carry EpiPen
+                    </li>
+                    <!-- Add more treatment entries below -->
+                    <li>
+                        <strong>Date:</strong> October 5, 2023<br>
+                        <strong>Provider:</strong> Dr. Patel<br>
+                        <strong>Treatment:</strong> Physical examination for annual check-up<br>
+                        <strong>Notes:</strong> Blood pressure and cholesterol levels normal
+                    </li>
+                    <li>
+                        <strong>Date:</strong> December 20, 2023<br>
+                        <strong>Provider:</strong> Dr. Nguyen<br>
+                        <strong>Treatment:</strong> Flu vaccination<br>
+                        <strong>Notes:</strong> Recommended to get vaccinated annually
+                    </li>
+                    <li>
+                        <strong>Date:</strong> April 8, 2024<br>
+                        <strong>Provider:</strong> Dr. Lee<br>
+                        <strong>Treatment:</strong> Counseling session for stress management<br>
+                        <strong>Notes:</strong> Advised relaxation techniques and regular exercise
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bookstyles.css">
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Pediatrician</title>
+</head>
+<body>
+    <div class="container-fluid">        
+        <h1>Top Pediatrician in India</h1>
+        <div id="item1">
+            <img src="av1.avif" width="60px">
+            <p>Dr G Sudhakar</p>
+            MBBS, MD (Pediatrics), DM (Pediatric Gastroenterology)<br>
+            Registration No:42328 <br>
+            Language:English,Hindi <br>
+            30 years experience overall <br>
+            Canal Circular Road , Kolkata <br><br>
+            <b>MON, FRI (11:00 AM-12:00 PM)</b><br><br>
+            <button class="but" data-bs-toggle="modal" data-bs-target="#mass" onclick="test_Name1(this)">Book Appointment</button>
+        </div>
+        <div id="item2">
+            <img src="av2.avif" width="60px">
+            <p> Dr Manish Raj</p>
+            MD, PDCCVisiting Fellowship RCPCH, UK<br>
+            Registration No:2656780 <br>
+            Language:English, Hindi, Kannada <br>    
+            10 years experience overall <br>
+            BANNERGHATTA ROAD & Jayanagar , Bangalore <br><br>
+            <b>MON, SAT (9:00 AM-1:00 PM)</b><br><br>
+            <button class="but" data-bs-toggle="modal" data-bs-target="#mass" onclick="test_Name1(this)">Book Appointment</button>
+        </div>
+        <div id="item3">
+            <img src="av3.avif" width="60px">
+            <p>Dr K Madhesh</p>
+            MBBS, DLO<br>
+            Registration No:1541624 <br>
+            Language:English <br>
+            20 years experience overall <br>
+            Jubileehills , Hyderabad <br><br>
+            <b>MON | FRI (10:00 AM-5:00 PM)</b><br><br>
+            <button class="but" data-bs-toggle="modal" data-bs-target="#mass" onclick="test_Name1(this)">Book Appointment</button>
+        </div>
+        <div id="item4">
+            <img src="av4.avif" width="60px">
+            <p>Dr L Sharath</p>         
+            MS Pediartrics HEAD & NECK SURGERY<br>
+            Registration No:448706 <br>
+            Language:English,Malayalam <br>
+            2 years experience overall <br>
+            Karukutty , Cochin <br><br>
+            <b>MON - WED (8:00 AM-12:00 PM)</b><br><br>
+            <button class="but" data-bs-toggle="modal" data-bs-target="#mass" onclick="test_Name1(this)">Book Appointment</button>
+        </div>
+        <div id="item5">
+            <img src="av5.avif" width="60px">
+            <p>Dr D Amirtha</p>
+            MS (Pediartrics)<br>
+            Registration No:6054929 <br>
+            Language:English, Hindi, Tamil, Telugu <br>  
+            10 years experience overall <br>
+            Greams Road , Chennai <br><br>
+            <b>MON - THU (1:00 PM-6:00 PM)</b><br><br>
+            <button class="but" data-bs-toggle="modal" data-bs-target="#mass" onclick="test_Name1(this)">Book Appointment</button>
+        </div>
+        <div id="item6">
+            <img src="av6.avif" width="60px">
+            <p> Dr M Saindhavi</p>
+            M.B.B.S.,MS(Pediartrics)<br>          
+            Registration No:12733 <br>
+            Language:English,Hindi <br>
+            16 years experience overall <br>
+            GREAMS ROAD & Poonamallee High Road & TONDIARPET , Chennai <br><br>
+            <b>MON, SAT (11:00 AM-2:00 PM)</b><br><br>
+            <button class="but" data-bs-toggle="modal" data-bs-target="#mass" onclick="test_Name1(this)">Book Appointment</button>
+        </div>
+        <div class="modal fade" tabindex="-1" id="mass">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title"> Request Appointment</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="clearModalContent()"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="test.php" method="post" >
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input type="hidden" id="test" name="test">
+                                    <input type="hidden" id="req" name="req" value="Doc">
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="">
+                                    <label for="name">Enter your name</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input type="phone" id="ph" name="ph" class="form-control" placeholder="">
+                                    <label for="ph">Enter your phone number</label>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" name="sub" class="btn btn-primary" onclick="requestTest(this)">Submit</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

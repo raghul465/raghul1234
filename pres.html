@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Prescription</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 28px;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .prescription {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ccc;
+            padding: 5px 15px 20px;
+            animation: slideInLeft 0.5s ease-out;
+        }
+        .prescription:hover {
+            background-color: #bccc;
+            border-radius: 5px;
+            transform: scale(1.02);
+        }
+        .prescription h2 {
+            margin-bottom: 10px;
+            color: #555;
+            font-size: 24px;
+        }
+        .prescription p {
+            margin-bottom: 10px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .prescription ul {
+            margin-left: 20px;
+            padding-left: 10px;
+            list-style-type: square;
+        }
+        .timestamp {
+            text-align: center;
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #888;
+            font-size: 12px;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Patient Prescription</h1>
+
+        <div class="prescription">
+            <h2>Prescription 1</h2>
+            <p><strong>Patient Name:</strong> John Doe</p>
+            <p><strong>Date of Birth:</strong> January 10, 1980</p>
+            <p><strong>Date of Prescription:</strong> March 15, 2024</p>
+            <p><strong>Time of Prescription:</strong> 10:30 AM</p>
+            <hr>
+            <p><strong>Prescribed Medications:</strong></p>
+            <ul>
+                <li>Acetaminophen 500mg - Take 1 tablet every 4-6 hours as needed for pain</li>
+                <li>Amoxicillin 250mg - Take 1 capsule three times daily with food</li>
+                <li>Loratadine 10mg - Take 1 tablet daily in the evening for allergies</li>
+            </ul>
+            <hr>
+            <p><strong>Prescribing Doctor:</strong> Dr. Smith</p>
+            <p><strong>Doctor's Notes:</strong> If any adverse reactions occur, stop taking the medication and contact our office immediately.</p>
+        </div>
+
+        <div class="prescription">
+            <h2>Prescription 2</h2>
+            <p><strong>Patient Name:</strong> Jane Doe</p>
+            <p><strong>Date of Birth:</strong> September 20, 1975</p>
+            <p><strong>Date of Prescription:</strong> April 1, 2024</p>
+            <p><strong>Time of Prescription:</strong> 9:45 AM</p>
+            <hr>
+            <p><strong>Prescribed Medications:</strong></p>
+            <ul>
+                <li>Aspirin 325mg - Take 1 tablet every 6 hours as needed for headache</li>
+                <li>Cephalexin 500mg - Take 1 capsule twice daily with food</li>
+                <li>Albuterol Inhaler - Use 2 puffs every 4-6 hours as needed for asthma symptoms</li>
+            </ul>
+            <hr>
+            <p><strong>Prescribing Doctor:</strong> Dr. Johnson</p>
+            <p><strong>Doctor's Notes:</strong> Follow-up appointment scheduled in 2 weeks to monitor progress.</p>
+        </div>
+
+        <div class="prescription">
+            <h2>Prescription 3</h2>
+            <p><strong>Patient Name:</strong> Michael Smith</p>
+            <p><strong>Date of Birth:</strong> November 5, 1990</p>
+            <p><strong>Date of Prescription:</strong> May 5, 2024</p>
+            <p><strong>Time of Prescription:</strong> 3:15 PM</p>
+            <hr>
+            <p><strong>Prescribed Medications:</strong></p>
+            <ul>
+                <li>Metformin 500mg - Take 1 tablet daily with meals for diabetes management</li>
+                <li>Atorvastatin 20mg - Take 1 tablet daily at bedtime for cholesterol control</li>
+                <li>Losartan 50mg - Take 1 tablet daily for blood pressure regulation</li>
+            </ul>
+            <hr>
+            <p><strong>Prescribing Doctor:</strong> Dr. Williams</p>
+            <p><strong>Doctor's Notes:</strong> Schedule a follow-up appointment in 1 month for check-up and medication review.</p>
+        </div>
+    </div>
+
+    <div class="timestamp">
+        <p>Last updated: April 15, 2024</p>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Evergreen Health Center. All rights reserved.</p>
+    </div>
+</body>
+</html>

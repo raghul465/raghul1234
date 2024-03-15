@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Medication and Disease</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 28px;
+        }
+        .medication {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ccc;
+            padding: 5px 15px 20px;
+        }
+        .medication:hover {
+            background-color: #bccc;
+            border-radius: 5px;
+            transform: scale(1.02);
+        }
+        .medication h2 {
+            margin-bottom: 10px;
+            color: #555;
+            font-size: 24px;
+        }
+        .medication p {
+            margin-bottom: 10px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .medication ul {
+            margin-left: 20px;
+            padding-left: 10px;
+            list-style-type: square;
+        }
+        .timestamp {
+            text-align: center;
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #888;
+            font-size: 12px;
+        }
+        .medication{
+            animation: slideInLeft 0.5s ease-out;
+        }
+        h1{
+            animation: fadeInUp 0.5s ease-out;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Medication and Disease</h1>
+
+        <div class="medication">
+            <h2>Medication 1</h2>
+            <p><strong>Medication Name:</strong> Acetaminophen 500mg</p>
+            <p><strong>Disease Treated:</strong> Pain relief for headaches, fever, and minor aches</p>
+        </div>
+
+        <div class="medication">
+            <h2>Medication 2</h2>
+            <p><strong>Medication Name:</strong> Amoxicillin 250mg</p>
+            <p><strong>Disease Treated:</strong> Bacterial infections such as respiratory tract infections, ear infections, and urinary tract infections</p>
+        </div>
+
+        <div class="medication">
+            <h2>Medication 3</h2>
+            <p><strong>Medication Name:</strong> Loratadine 10mg</p>
+            <p><strong>Disease Treated:</strong> Allergy symptoms including sneezing, runny nose, itching, and watery eyes</p>
+        </div>
+
+        <div class="medication">
+            <h2>Medication 4</h2>
+            <p><strong>Medication Name:</strong> Ibuprofen 400mg</p>
+            <p><strong>Disease Treated:</strong> Pain and inflammation relief for conditions such as arthritis, menstrual cramps, and minor injuries</p>
+        </div>
+
+        <div class="medication">
+            <h2>Medication 5</h2>
+            <p><strong>Medication Name:</strong> Omeprazole 20mg</p>
+            <p><strong>Disease Treated:</strong> Acid reflux, heartburn, and gastroesophageal reflux disease (GERD)</p>
+        </div>
+    </div>
+
+    <div class="timestamp">
+        <p>Last updated: April 15, 2024</p>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Evergreen Health Center. All rights reserved.</p>
+    </div>
+</body>
+</html>
