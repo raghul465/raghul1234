@@ -14,6 +14,9 @@ function validateform(){
         document.getElementById("password").value="";
     }
 }
+function compreset(){
+    document.getElementById("complaintForm").reset();
+}
 function clearModalContent() {
     document.getElementById("name").value = "";
     document.getElementById("ph").value = "";

@@ -34,23 +34,24 @@
     </style>
 </head>
 <body>
-
 <div class="container">
 <?php
     include "db.php";
     $name = $_POST["fullName"];
     $email = $_POST["email"];
-    $subject = $_POST["subject"];
+    $subject = $_POST["cat"];
     $complaint = $_POST["complaint"];
     $sql="INSERT INTO comp (name,email,sub,complaint) VALUES ('$name','$email','$subject','$complaint')";
     if ($conn->query($sql) === TRUE) {
         echo '<div class="output">';
         echo '<h2>Complaint Details</h2>';
         echo '<p><strong>Patient Name:</strong> ' . $name . '</p>';
-        echo '<p><strong>Test Name:</strong> ' . $email . '</p>';
-        echo '<p><strong>Phone Number:</strong> ' . $subject . '</p>';
+        echo '<p><strong>Email:</strong> ' . $email . '</p>';
+        echo '<p><strong>Category:</strong> ' . $subject . '</p>';
         echo '<p><strong>Phone Number:</strong> ' . $complaint . '</p>';
         echo '</div>';
+        echo '<script>document.getElementById("complaintForm").reset();</script>';
+        exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }

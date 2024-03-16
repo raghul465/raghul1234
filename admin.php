@@ -39,7 +39,7 @@ function displayRequesteddoc() {
 }
 function displaycomplaint() {
     include "db.php";
-    $sql = "SELECT name, email, sub,complaint FROM comp";
+    $sql = "SELECT name, email, sub,complaint FROM comp ORDER BY sub";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
@@ -98,10 +98,26 @@ function insertAppointment() {
     $dateTime = $_POST["dateTime"];
     $sql = "INSERT INTO testbooked (patient, Name, datetime) VALUES ('$patientName', '$appointmentType', '$dateTime')"; 
     if(mysqli_query($conn, $sql)) {
-        // Redirect back to the same page after insertion
-        header("Location: ".$_SERVER['PHP_SELF']);
-        exit();
-    }
+        // Fetch the patient's mobile number from the database
+        $fetchSql = "SELECT phone FROM test WHERE patient = '$patientName'";
+        $result = $conn->query($fetchSql);
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $phoneNumber = $row["phone"];
+            // Construct the WhatsApp message link
+            $message = "Your appointment has been scheduled successfully. Date: $dateTime, Request: $appointmentType";
+            $whatsappLink = "https://wa.me/$phoneNumber?text=" . urlencode($message);
+            // Redirect to the WhatsApp message link
+            header("Location: $whatsappLink");
+            // Delete the record from the test table
+            $deleteSql = "DELETE FROM test WHERE patient = '$patientName'";
+            mysqli_query($conn, $deleteSql);
+            exit();
+        }
+        else {
+            echo "<p>Error: Patient not found</p>";
+        }
+    } 
      else {
         echo "<p>Error scheduling appointment: " . mysqli_error($conn) . "</p>";
     }

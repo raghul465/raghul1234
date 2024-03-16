@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test Results</title>
+<style>
+        body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        background-color: #f8f8f8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    th, td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+        color: #555;
+    }
+    td {
+        color: #333;
+    }
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Test Results</h1>
+    <table>
+        <tr>
+            <th>Test Name</th>
+            <th>Result</th>
+            <th>Reference Range</th>
+        </tr>
+        <tr>
+            <td>Blood Glucose</td>
+            <td>120 mg/dL</td>
+            <td>70-110 mg/dL</td>
+        </tr>
+        <tr>
+            <td>Cholesterol</td>
+            <td>200 mg/dL</td>
+            <td>&lt;200 mg/dL</td>
+        </tr>
+        <tr>
+            <td>Hemoglobin</td>
+            <td>12 g/dL</td>
+            <td>12-16 g/dL</td>
+        </tr>
+        <tr>
+            <td>White Blood Cell Count (WBC)</td>
+            <td>8,000 /mm3</td>
+            <td>4,000-11,000 /mm3</td>
+        </tr>
+        <tr>
+            <td>Platelet Count</td>
+            <td>250,000 /mm3</td>
+            <td>150,000-450,000 /mm3</td>
+        </tr>
+        <tr>
+            <td>Alanine Aminotransferase (ALT)</td>
+            <td>25 U/L</td>
+            <td>0-40 U/L</td>
+        </tr>
+        <!-- Add more rows for additional test results -->
+    </table>
+</div>
+</body>
+</html>
